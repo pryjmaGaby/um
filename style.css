@@ -1,45 +1,185 @@
-@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Rakkas&display=swap');
+/* style.css */
 
-/* Variáveis */
 :root {
-    --primary-color: #026773;
-    --secondary-color: #3CA6A6;
-    --text-color: #024959;
-    --background-color: #F2E3D5;
-    --button-hover: #012E40;
-    --font-body: "Chocolate Classical Sans", serif;
-    --font-titulo: "Rakkas", serif;
+    --primary-color: #4CAF50; /* Verde principal */
+    --secondary-color: #8BC34A; /* Verde mais claro */
+    --accent-color: #FFC107; /* Amarelo para destaque */
+    --text-color: #333; /* Cor do texto principal */
+    --background-color: #f4f4f4; /* Cor de fundo geral */
+    --light-background: #fff; /* Fundo para seções de conteúdo */
+    --link-color: var(--primary-color);
+    --link-hover-color: var(--secondary-color);
+    --footer-background: #333;
+    --footer-text-color: #eee;
 }
 
-/* código omitido */
-
-/* código omitido */
-
-/* Reset */
-* {
+body {
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-body);
-}
-
-/* Corpo da página */
-body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
 }
 
-h3 {
-    margin-top: 25px;
+header {
+    background-color: var(--light-background);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-p {
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+header p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--link-hover-color);
+}
+
+main {
+    padding: 20px;
+}
+
+.conteudo {
+    background-color: var(--light-background);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.conteudo article {
+    margin-bottom: 25px;
+}
+
+.conteudo article h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.conteudo article p {
+    line-height: 1.8;
+}
+
+.conteudo ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.conteudo ul li {
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.cta-button:hover {
+    background-color: #e0a800;
+}
+
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    border: 0;
     margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-img {
-    max-width: 90%;
+footer {
+    background-color: var(--footer-background);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
 }
 
-/* código omitido */
+.cta-footer {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.cta-footer:hover {
+    color: #ffd740;
+}
+
+/* Estilos para ícones (se estiver usando alguma biblioteca como Font Awesome) */
+.fa-solid {
+    margin-left: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .conteudo {
+        padding: 20px;
+    }
+
+    .conteudo h2 {
+        font-size: 1.5em;
+    }
+}
